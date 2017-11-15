@@ -1,7 +1,7 @@
 /**
  * Created by llitfkitfk on 2/10/17.
  */
-import React from "react";
+import React, { Component } from "react";
 import { View, StatusBar } from "react-native";
 import {
     Scene,
@@ -17,12 +17,12 @@ import {
     Lightbox,
 } from "react-native-router-flux";
 import HomeView from "./containers/HomeView";
-import DrawerContent from "./components/DrawerContent"
+import SideMenu from "./components/drawer/SideMenu";
 import AppEventEmitter from "./common/AppEventEmitter";
 import Constants from "./common/Constants";
 import MenuIcon from './images/menu_burger.png';
 
-class Routes extends React.Component {
+class Routes extends Component {
 
 
     componentDidMount() {
@@ -41,15 +41,15 @@ class Routes extends React.Component {
                 <StatusBar barStyle="dark-content" />
                 <Router>
                     <Stack key="root">
-                        <Scene key="home" hideNavBar component={HomeView} />
                         <Drawer
                             hideNavBar
                             key="drawer"
-                            contentComponent={DrawerContent}
-                            drawerImage={MenuIcon}>
+                            contentComponent={SideMenu}>
                             <Scene hideNavBar>
-                                
+                                <Scene key="home" component={HomeView} />
+                                <Scene key="home1" component={HomeView} />
                             </Scene>
+
                         </Drawer>
                     </Stack>
                 </Router>

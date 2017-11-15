@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import Root from './app/root';
+import App from './app/App';
 
-AppRegistry.registerComponent('reactnativedemonew', () => Root);
+AppRegistry.registerComponent('ReactNativeHighPerformance', () => App);

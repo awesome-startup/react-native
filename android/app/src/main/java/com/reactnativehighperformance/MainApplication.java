@@ -1,4 +1,4 @@
-package com.reactnativedemonew;
+package com.reactnativehighperformance;
 
 import android.app.Application;
 

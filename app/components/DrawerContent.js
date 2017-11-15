@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import { StyleSheet, Text, View, ViewPropTypes } from 'react-native';
 
@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   },
 });
 
-class DrawerContent extends React.Component {
+class DrawerContent extends Component {
   static propTypes = {
     name: PropTypes.string,
     sceneStyle: ViewPropTypes.style,
