@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import App from './app/App';
+import setup from "./app/setup";
 
-AppRegistry.registerComponent('ReactNativeHighPerformance', () => App);
+AppRegistry.registerComponent('ReactNativeHighPerformance', setup);
